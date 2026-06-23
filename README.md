@@ -75,5 +75,5 @@ Safety interlock system for an industrial robot cell — EKF state estimator fee
 
 I'm actively looking for entry-level / new-grad roles in **Robotics Software Engineering** and **Embedded Systems**.
 
-- 📧 apandrek@asu.edu
+- 📧 asrithmoose148@gmail.com
 - 🔗 [LinkedIn](https://www.linkedin.com/in/asrith-pandreka/)
