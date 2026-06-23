@@ -1,6 +1,6 @@
 # Hi, I'm Asrith 👋
 
-**Robotics & Embedded Systems Engineer** — I build systems that close the gap between simulation and real hardware.
+**Robotics & Embedded Systems Engineer** - I build systems that close the gap between simulation and real hardware.
 
 MS Robotics @ Arizona State University. I work across the full stack: ROS 2 middleware, embedded firmware, real-time control loops, and perception pipelines.
 
@@ -11,28 +11,28 @@ MS Robotics @ Arizona State University. I work across the full stack: ROS 2 midd
 ## 📌 Featured Projects
 
 ### 🧠 [Humanoid Locomotion in Isaac Sim](https://github.com/asrithp244/IsaacSim-humanoid-gait)
-Real-time locomotion control for a humanoid model — PD controller gains tuned against USD Physics DriveAPI at runtime in NVIDIA Isaac Sim.
+Real-time locomotion control for a humanoid model, with PD controller gains tuned against USD Physics DriveAPI at runtime in NVIDIA Isaac Sim.
 - **Stack:** NVIDIA Isaac Sim · USD PhysX DriveAPI · Python · ROS 2
 - **What it proves:** Sim-to-real pipeline, humanoid dynamics, runtime control loop debugging
-- **Key challenge solved:** [Add one sentence: what broke, how you diagnosed it, what you fixed]
+- **Key challenge solved:** High PD stiffness values caused joint oscillation in the PhysX contact solver; diagnosed by logging DriveAPI torque outputs per joint, identified the stiffness/damping ratio was mismatched to the inertia parameters, and retuned gains live without resetting the simulation.
 
 ### 🤖 [TurtleBot4 Autonomous Navigation](https://github.com/asrithp244)
 Full autonomous navigation stack on TurtleBot4 with an ESP32 co-processor for real-time embedded control.
 - **Stack:** ROS 2 Humble · Nav2 · SLAM Toolbox · AMCL · ESP32 (FreeRTOS) · C++ · Python
 - **What it proves:** Hardware bring-up, embedded firmware, full nav stack deployment on a physical robot
-- **Key challenge solved:** [Add one sentence: what broke, how you diagnosed it, what you fixed]
+- **Key challenge solved:** SLAM map corruption under wheel slip on smooth floors; diagnosed via odometry covariance spikes, added encoder sanity checks in the ESP32 firmware to detect slip conditions, and improved localization consistency significantly.
 
 ### 🦾 [6-DoF Manipulation with Vision Guidance](https://github.com/asrithp244)
 Perception-to-motion pipeline for a 6-DOF arm: camera input → YOLOv8 detection → MoveIt trajectory execution.
 - **Stack:** ROS 2 · MoveIt · OpenCV · YOLOv8 · PyTorch · OMPL · Inverse Kinematics
 - **What it proves:** End-to-end perception + manipulation, real-time CV integration
-- **Key challenge solved:** [Add one sentence: what broke, how you diagnosed it, what you fixed]
+- **Key challenge solved:** YOLOv8 inference latency on CPU caused the arm to plan trajectories against stale detections, leading to grasp misses; moved inference to a dedicated thread decoupled from the planning loop, cutting end-to-end delay and eliminating the lag-induced misses.
 
 ### 🏭 [Virtual PLC Industrial Safety System](https://github.com/asrithp244/plc-kalman-ekf)
-Safety interlock system for an industrial robot cell — EKF state estimator feeds a watchdog relay via Modbus TCP.
-- **Stack:** Python · Modbus TCP · IEC 61131-3 logic · Plotly Dash · EKF
-- **What it proves:** Industrial protocol knowledge (Modbus/PLC), control system safety design
-- **Key challenge solved:** [Add one sentence: what broke, how you diagnosed it, what you fixed]
+Safety interlock system for an industrial robot cell: EKF state estimator feeds a watchdog relay via Modbus TCP, running IEC 61131-3 Structured Text safety logic on OpenPLC.
+- **Stack:** Python · Modbus TCP · IEC 61131-3 · Plotly Dash · EKF · Docker
+- **What it proves:** Industrial protocol knowledge (Modbus/PLC), control system safety design, sensor fusion
+- **Key challenge solved:** Raw encoder readings fed directly into safety interlocks caused constant false alarms from sensor quantization noise; built an EKF from scratch (numpy only, analytic Jacobians, Joseph-form covariance update) and added NEES chi-squared consistency monitoring, giving statistically grounded filter health checks rather than visual inspection.
 
 ---
 
@@ -66,7 +66,7 @@ Safety interlock system for an industrial robot cell — EKF state estimator fee
 
 ## 📚 Education
 
-**M.S. Robotics & Autonomous Systems** — Arizona State University  
+**M.S. Robotics & Autonomous Systems** - Arizona State University  
 **B.Tech Electrical Engineering**
 
 ---
