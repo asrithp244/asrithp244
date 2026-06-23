@@ -4,7 +4,7 @@
 
 MS Robotics @ Arizona State University. I work across the full stack: ROS 2 middleware, embedded firmware, real-time control loops, and perception pipelines.
 
-📬 apandrek@asu.edu · [LinkedIn](https://www.linkedin.com/in/asrith-pandreka/) · Open to new-grad Robotics SWE & Embedded Systems roles
+📬 asrithmoose148@gmail.com · [LinkedIn](https://www.linkedin.com/in/asrith-pandreka/) · Open to new-grad Robotics SWE & Embedded Systems roles
 
 ---
 
