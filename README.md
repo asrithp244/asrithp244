@@ -16,11 +16,11 @@ Real-time locomotion control for a humanoid model, with PD controller gains tune
 - **What it proves:** Sim-to-real pipeline, humanoid dynamics, runtime control loop debugging
 - **Key challenge solved:** High PD stiffness values caused joint oscillation in the PhysX contact solver; diagnosed by logging DriveAPI torque outputs per joint, identified the stiffness/damping ratio was mismatched to the inertia parameters, and retuned gains live without resetting the simulation.
 
-### 🤖 [TurtleBot4 Autonomous Navigation](https://github.com/asrithp244)
-Full autonomous navigation stack on TurtleBot4 with an ESP32 co-processor for real-time embedded control.
-- **Stack:** ROS 2 Humble · Nav2 · SLAM Toolbox · AMCL · ESP32 (FreeRTOS) · C++ · Python
-- **What it proves:** Hardware bring-up, embedded firmware, full nav stack deployment on a physical robot
-- **Key challenge solved:** SLAM map corruption under wheel slip on smooth floors; diagnosed via odometry covariance spikes, added encoder sanity checks in the ESP32 firmware to detect slip conditions, and improved localization consistency significantly.
+### 🤖 [TurtleBot4 Autonomous Navigation](https://github.com/asrithp244/RAS598-2025-S-Team05.github.io)
+Goal-oriented autonomy on TurtleBot4: an ESP32 IMU module streams positional goals over serial to a ROS 2 node, which feeds the Nav2 stack for real-time obstacle avoidance and SLAM-based navigation.
+- **Stack:** ROS 2 Humble · Nav2 · SLAM Toolbox · ESP32 · Python · pyserial
+- **What it proves:** Hardware bring-up, cross-device ROS 2 communication, full nav stack deployment on a physical robot
+- **Key challenge solved:** ESP32 serial output occasionally dropped or malformed packets under USB load, causing the goal publisher node to crash; added input validation and reconnect logic to the serial parser so the nav stack recovered gracefully without requiring a restart.
 
 ### 🦾 [6-DoF Manipulation with Vision Guidance](https://github.com/asrithp244)
 Perception-to-motion pipeline for a 6-DOF arm: camera input → YOLOv8 detection → MoveIt trajectory execution.
