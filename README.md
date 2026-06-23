@@ -39,7 +39,7 @@ Safety interlock system for an industrial robot cell: EKF state estimator feeds 
 ## 🛠 Skills
 
 **Robotics & Planning**
-`ROS 2 (Humble)` `Nav2` `MoveIt` `SLAM Toolbox` `AMCL` `OMPL` `Trajectory Optimization` `Ceres Solver`
+`ROS 2 (Humble)` `Nav2` `MoveIt` `SLAM Toolbox` `AMCL` `OMPL` `Path Planning`
 
 **Control & Estimation**
 `PID / PD Control` `EKF / Sensor Fusion` `Quadrature Encoder Feedback` `Real-Time Control Loops`
