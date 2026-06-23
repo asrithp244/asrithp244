@@ -16,7 +16,7 @@ Real-time locomotion control for a humanoid model, with PD controller gains tune
 - **What it proves:** Sim-to-real pipeline, humanoid dynamics, runtime control loop debugging
 - **Key challenge solved:** High PD stiffness values caused joint oscillation in the PhysX contact solver; diagnosed by logging DriveAPI torque outputs per joint, identified the stiffness/damping ratio was mismatched to the inertia parameters, and retuned gains live without resetting the simulation.
 
-### 🤖 [TurtleBot4 Autonomous Navigation](https://github.com/asrithp244/RAS598-2025-S-Team05.github.io)
+### 🤖 [TurtleBot4 Autonomous Navigation]([https://github.com/asrithp244/RAS598-2025-S-Team05.github.io](https://github.com/RAS598-2025-S-Team05/RAS598-2025-S-Team05.github.io.git))
 Goal-oriented autonomy on TurtleBot4: an ESP32 IMU module streams positional goals over serial to a ROS 2 node, which feeds the Nav2 stack for real-time obstacle avoidance and SLAM-based navigation.
 - **Stack:** ROS 2 Humble · Nav2 · SLAM Toolbox · ESP32 · Python · pyserial
 - **What it proves:** Hardware bring-up, cross-device ROS 2 communication, full nav stack deployment on a physical robot
